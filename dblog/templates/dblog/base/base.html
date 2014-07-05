@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<!-- Meta Tags-->
+		<meta charset="utf-8">
+		{% if not Meta.is_live %}
+			<meta name="robots" content="noindex">
+		{% endif %}
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta name="description" content="{% block meta_description %}{{ Meta.meta_description }}{% endblock %}">
+	    <meta name="author" content="https://plus.google.com/106920927569961851672/posts">
+		<title>{% block page_title %}{{ Meta.page_title }}{% endblock %}</title>
+		{% comment %}{% include 'base/social_meta.html' %}{% endcomment %}
+		<!-- End Meta Tags-->
+
+	    <!-- Styesheets-->
+		<link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
+		<link href="{{ STATIC_URL }}css/font-awesome.css" rel="stylesheet">
+		<link href="{{ STATIC_URL }}css/prettyPhoto.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
+		<link href="{{ STATIC_URL }}css/overwrite_style.css" rel="stylesheet" />
+		<!-- End Stylesheets-->	
+
+	</head>
+
+	<body data-spy="scroll" data-target="#header">
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=502857213088431";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+			ga('create', '{{ Meta.GA_prop }}', 'gamelifestats.com');
+			ga('send', 'pageview');
+
+		</script>
+
+
+
+
+
+
+
+		<header id="header">
+			header
+			{% block header %}
+				
+			{% endblock %}
+		</header>
+
+
+		{% block content %}{% endblock %}
+
+		<footer>
+			footer
+		</footer>
+
+	</body>
+</html>
