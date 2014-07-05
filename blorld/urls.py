@@ -16,5 +16,11 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^tinymce/', include('tinymce.urls')),
 
-    url(r'^$', 'dblog.views.home'),
+    #url(r'^$', 'dblog.base_views.home'),
+)
+
+
+urlpatterns += patterns('dblog.blog_views',
+    url(r'^$', 'main'),
+    url(r'^[\w-]+(\d+)$', 'single_post'),
 )
