@@ -60,3 +60,9 @@ class dblog_Post(models.Model):
 
     def __unicode__(self):
         return self.headline
+
+class dblog_Settings(models.Model):
+    name = models.CharField(max_length=40)
+    tagline = models.CharField(max_length=254)
+    domain = models.CharField(max_length=100)
+    ga_id = models.CharField(max_length=25)

@@ -7,3 +7,4 @@ class PostAdmin(admin.ModelAdmin):
 admin.site.register(dblog_Post, PostAdmin)
 admin.site.register(dblog_Tag)
 admin.site.register(dblog_Author)
+admin.site.register(dblog_Settings)

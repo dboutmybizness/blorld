@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" class="no-js">
 	<head>
 		<!-- Meta Tags-->
 		<meta charset="utf-8">
@@ -14,11 +14,8 @@
 		<!-- End Meta Tags-->
 
 	    <!-- Styesheets-->
-		<link href="{{ STATIC_URL }}css/bootstrap.css" rel="stylesheet">
-		<link href="{{ STATIC_URL }}css/font-awesome.css" rel="stylesheet">
-		<link href="{{ STATIC_URL }}css/prettyPhoto.css" rel="stylesheet" type="text/css" media="all" />
-		<link href="{{ STATIC_URL }}css/style.css" rel="stylesheet">
-		<link href="{{ STATIC_URL }}css/overwrite_style.css" rel="stylesheet" />
+		<link rel="stylesheet" href="{{ STATIC_URL }}css/foundation.css" />
+		<script src="{{ STATIC_URL }}js/vendor/modernizr.js"></script>
 		<!-- End Stylesheets-->	
 
 	</head>
@@ -45,24 +42,35 @@
 		</script>
 
 
+		<header>
 
-
-
-
-
-		<header id="header">
-			header
-			{% block header %}
-				
-			{% endblock %}
 		</header>
-
-
 		{% block content %}{% endblock %}
-
-		<footer>
-			footer
+		<footer class="row">
+			<div class="large-12 columns">
+				<hr/>
+				<div class="row">
+					<div class="large-6 columns">
+						<p>© Copyright no one at all. Go to town.</p>
+					</div>
+					<div class="large-6 columns">
+						<ul class="inline-list right">
+							<li><a href="#">Link 1</a></li>
+							<li><a href="#">Link 2</a></li>
+							<li><a href="#">Link 3</a></li>
+							<li><a href="#">Link 4</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 		</footer>
+
+
+		<script src="{{ STATIC_URL }}js/vendor/jquery.js"></script>
+		<script src="{{ STATIC_URL }}js/foundation.min.js"></script>
+		<script>
+			$(document).foundation();
+		</script>
 
 	</body>
 </html>
