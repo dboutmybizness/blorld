@@ -123,6 +123,7 @@ INSTALLED_APPS = (
     'dblog',
     'tinymce',
     'django_wysiwyg',
+    'htdocs',
 )
 
 # A sample logging configuration. The only tangible logging

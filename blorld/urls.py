@@ -24,3 +24,7 @@ urlpatterns += patterns('dblog.blog_views',
     url(r'^$', 'main'),
     url(r'^[\w-]+(\d+)$', 'single_post'),
 )
+
+urlpatterns += patterns('htdocs.views',
+    url(r'^basic$', 'basic'),
+)
